@@ -1,9 +1,12 @@
 [build]
-base = "ecomapp"
-publish = "ecomapp/build"
-command = "npm run build"
+  base = "ecomapp"
+  publish = "build"
+  command = "npm run build"
+
+[build.environment]
+  CI = "false"
 
 [[redirects]]
-from = "/*"
-to = "/ecomapp/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
