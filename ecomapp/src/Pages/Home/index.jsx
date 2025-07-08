@@ -14,15 +14,15 @@ export const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState(0); // 0 for 'All' category
 
     useEffect(() => {
-        (async () => {
-            const data = await getAllProducts();
-            const categories = await getAllCategories();
-            const updatedCategories = [...categories, { id: 0, name: 'All' }]; // Adding 'All' category
-            setCategories(updatedCategories);
-            dispatch(setProducts(data));
-        })();
+    (async () => {
+        const data = await getAllProducts();
+        const categories = await getAllCategories();
+        const updatedCategories = [...categories, { id: 0, name: 'All' }];
+        setCategories(updatedCategories);
+        dispatch(setProducts(data));
+      })();
+    }, [dispatch]); 
 
-    }, [])
 
     const products = useSelector(state => state.products.products);
 
