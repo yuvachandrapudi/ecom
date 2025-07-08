@@ -1,9 +1,10 @@
 [build]
-  base    = "ecomapp"
-  publish = "ecomapp/build"
+  base = "ecomapp"
+  publish = "build"
   command = "npm run build"
 
 [[redirects]]
-  from   = "/*"
-  to     = "/index.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
+
